@@ -16,6 +16,7 @@ export default {
     activate: function (transition) {
       if (transition.to.name === 'index') {
         transition.redirect({name: 'home'})
+        return
       }
       transition.next()
     }
@@ -23,7 +24,7 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 @import "../node_modules/normalize.css/normalize.css";
 *, :before, :after {
     -webkit-box-sizing: border-box;
